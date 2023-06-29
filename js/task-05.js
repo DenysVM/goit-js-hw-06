@@ -1,6 +1,13 @@
-const textInput = document.getElementById("name-input");
-const output = document.getElementById("name-output");
+const nameInput = document.getElementById('name-input');
+const nameOutput = document.getElementById('name-output');
 
-textInput.addEventListener("input", (event) => {
-    output.textContent = event.currentTarget.value;
+nameInput.addEventListener('input', () => {
+
+    const name = nameInput.value;
+
+    if (name === '') {
+        nameOutput.textContent = 'Anonymous';
+    } else {
+        nameOutput.textContent = name;
+    }
 });
